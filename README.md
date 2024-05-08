@@ -1,4 +1,3 @@
-/*
 :Date: 2024-05-08
 :Version: 0.0.0
 :Authors:
@@ -71,4 +70,3 @@ what is inside takdivs:
     
     * takdivs.css: this file just imports the other files. you are better using
       takdivs-min.css instead of this one.
-*/
