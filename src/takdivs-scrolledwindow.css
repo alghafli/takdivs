@@ -1,0 +1,40 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-scrolledwindow class.
+
+usage:
+  * apply .takdivs-scrolledwindow class to a div.
+  
+  * put a single element child in the .takdivs-scrolledwindow.
+    
+  * the .takdivs-scrolledwindow will take the size given to it by its parent
+    regardless of its child size.
+  
+  * the .takdivs-scrolledwindow child will take the same size as the
+    .takdivs-scrolledwindow.
+  
+  * the .takdivs-scrolledwindow will allow you to scroll over the child.
+    
+  * all children of .takdivs-imgbox other than the first child will not be
+    displayed.
+*/
+
+.takdivs-scrolledwindow {
+    position: relative;
+    overflow: auto;
+    
+    & > * {
+        position: absolute;
+        width: 100%;
+        height:  100%;
+    }
+    
+    & > :not(:first-child) {
+        display: none;
+    }
+}
+

@@ -1,0 +1,50 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-table class.
+
+usage:
+  * apply .takdivs-table class to a <table> element.
+  
+  * the <thead> child of the .takdivs-table will always be visible, even if the
+    table is so big and you scroll down the table.
+    
+  * borders are added to the cells of the table.
+    
+  * you must put a <thead> in the .takdivs-table. otherwise, the table header
+    will not follow the scroll to stay visible.
+*/
+
+.takdivs-table {
+    --takdivs-border-width: var(--takdivs-border-small);
+    border-spacing: 0;
+
+    & > thead {
+        position: sticky;
+        inset-block-start: 0;
+    }
+
+    & td, & th {
+        border: solid black calc(var(--takdivs-border-width) / 2);
+    }
+
+    & tr:first-child td, & tr:first-child th {
+        border-block-start-width: var(--takdivs-border-width);
+    }
+
+    & tr:last-child td, & tr:last-child th {
+        border-block-end-width: var(--takdivs-border-width);
+    }
+
+    td:first-child, th:first-child {
+        border-inline-start-width: var(--takdivs-border-width);
+    }
+
+    td:last-child, th:last-child {
+        border-inline-end-width: var(--takdivs-border-width);
+    }
+}
+

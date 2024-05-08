@@ -1,0 +1,19 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+custom properties used in takdivs:
+  * takdivs-border-*:
+    * small
+    * medium
+    * large
+*/
+
+:root {
+    --takdivs-border-small: 2px;
+    --takdivs-border-medium: 4px;
+    --takdivs-border-large: 6px;
+}
+
