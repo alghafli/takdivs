@@ -1,0 +1,64 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-box class.
+
+usage:
+  * apply the following to the parent:
+    * apply .takdivs-box class to a div to make it a flexbox in the row direction.
+    * apply .vertical class to the .takdivs-box element to change its direction to
+      column.
+    * apply .reverse class to reverse the direction of the div.
+  * apply the following to the children of .takdivs-box:
+    * apply .pack-end class to make the child appear at the end of the
+      .takdivs-box.
+*/
+
+.takdivs-box {
+    display: flex;
+    flex-direction: row;
+
+    & > .stretch {
+        flex: 1;
+    }
+
+    & > .pack-end {
+        order: calc(infinity);
+
+        &:nth-child(1 of .pack-end) {
+            margin-inline: auto 0;
+            margin-block: 0 0;
+        }
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        & > .pack-end:nth-child(1 of .pack-end) {
+            margin-inline: 0 auto;
+            margin-block: 0 0;
+        }
+    }
+
+    &.vertical {
+        flex-direction: column;
+
+        & > .pack-end:nth-child(1 of .pack-end) {
+            margin-inline: 0 0;
+            margin-block: auto 0;
+        }
+
+        &.reverse {
+            flex-direction: column-reverse;
+
+            & > .pack-end:nth-child(1 of .pack-end) {
+                margin-inline: 0 0;
+                margin-block: 0 auto;
+            }
+        }
+    }
+}
+

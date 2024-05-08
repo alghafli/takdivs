@@ -1,0 +1,39 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-imgbox class.
+
+usage:
+  * apply .takdivs-imgbox class to a div.
+  
+  * put a single replaced element child (<img> or <video>) in the
+    .takdivs-imgbox.
+    
+  * the .takdivs-imgbox will take the size given to it by its parent regardless
+    of its child size.
+  
+  * the .takdivs-imgbox child will take the same size as the .takdivs-imgbox and
+    resize itself to be fully displayed preserving its aspect ratio.
+    
+  * all children of .takdivs-imgbox other than the first child will not be
+    displayed.
+*/
+
+.takdivs-imgbox {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    & > :not(:first-child) {
+        display: none;
+    }
+}
+

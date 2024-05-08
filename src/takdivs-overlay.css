@@ -1,0 +1,36 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-overlay class.
+
+usage:
+  * apply .takdivs-overlay class to a div.
+  
+  * the .takdivs-overlay will take the size given to it by its parent regardless
+    of its child size.
+  
+  * each .takdivs-overlay child will take the same size as the .takdivs-overlay.
+    if the child is a replaced element, it will resize itself to be fully
+    displayed preserving its aspect ratio.
+    
+  * all children of .takdivs-overlay will appear on top of each other.
+
+an example use case is to have an <img> element and put an <svg> on top of it.
+you can put rectangles in the <svg> element to highlight certain areas in the
+<img>.
+*/
+
+.takdivs-overlay {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+

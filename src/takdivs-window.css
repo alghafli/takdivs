@@ -1,0 +1,38 @@
+/*
+:Date: 2024-05-08
+:Version: 0.0.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-window class.
+
+usage:
+  * apply .takdivs-window class to the <body> element.
+  
+  * put a single child in the .takdivs-window.
+    
+  * the .takdivs-window will take full size of the viewport.
+  
+  * the .takdivs-window child will take the same size as the .takdivs-window.
+    
+  * all children of .takdivs-window other than the first child will not be
+    displayed.
+*/
+
+.takdivs-window {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    
+    padding: var(--takdivs-border-medium);
+    
+    & > * {
+        width: 100%;
+        height: 100%;
+    }
+
+    & > :not(:first-child) {
+        display: none;
+    }
+}
+
