@@ -1,6 +1,9 @@
 :Date: 2024-05-08
+
 :Version: 0.0.0
+
 :Authors:
+
     * Mohammad Alghafli <thebsom@gmail.com>
 
 takdivs, styles for your web page layout
@@ -8,6 +11,7 @@ takdivs, styles for your web page layout
 takdivs is a css style sheet that gives you css classes to layout your webpage.
 
 why i made takdivs:
+
   before i used html, css and js, i programmed using Gtk 3. Gtk 3 provides
   awesome layout methods like box and grid.
   
@@ -19,12 +23,14 @@ why i made takdivs:
   i implemented what i commonly use and hope you will find it useful too.
   
 what is inside takdivs:
+
   takdivs is split into multiple files, most of which provide styles related to
   a single css class. below is a brief documentation of each file. you can check
   each file for a more detailed but still brief documentation. i should write
   full documentation to show how things work together.
   
   inside takdivs are the follwing:
+  
     * takdivs-min.css: this is the minified version of takdivs and provides all
       styles provided by other takdivs files. this is the only file you should
       use in your web page.
