@@ -1,0 +1,30 @@
+/*
+:Date: 2024-05-11
+:Version: 0.1.0
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-grid class. it makes an element a grid container. the style was written
+to be similar to a file manager.
+
+usage:
+  * apply .takdivs-grid class to an element to make it a grid.
+  
+  * all children will take the same width of 100px.
+  
+  * all children will be the same height as the child of maximum height.
+*/
+
+.takdivs-grid {
+    --takdivs-column-width: var(--takdivs-size-medium);
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--takdivs-column-width));
+    grid-auto-rows: 1fr;
+    
+    justify-items: center;
+    align-items: center;
+    
+    gap: var(--takdivs-border-large);
+}
+

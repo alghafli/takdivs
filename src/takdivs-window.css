@@ -1,6 +1,6 @@
 /*
-:Date: 2024-05-08
-:Version: 0.0.0
+:Date: 2024-05-10
+:Version: 0.1.0
 :Authors:
     * Mohammad Alghafli <thebsom@gmail.com>
 
@@ -20,6 +20,8 @@ usage:
 */
 
 .takdivs-window {
+    box-sizing: border-box;
+    
     width: 100vw;
     height: 100vh;
     margin: 0;
