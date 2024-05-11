@@ -1,6 +1,6 @@
-:Date: 2024-05-08
+:Date: 2024-05-11
 
-:Version: 0.0.0
+:Version: 0.1.0
 
 :Authors:
 
@@ -65,10 +65,19 @@ what is inside takdivs:
     * takdivs-scrolledwindow.css: .takdivs-scrolledwindow class makes the
       element behave like a Gtk.ScrolledWindow. it should only contain a single
       child and behaves as follows:
-      * the child will occupy the size given to the .takdivs-scrolledwindow by
-        the parent of .takdivs-scrolledwindow.
+      * the child will occupy the size it needs depending on its content.
       * the .takdivs-scrolledwindow will provide scrolling functionality to the
         child if it overflows.
+      * you can disable scrolling in x axis or y axis by applying .no-x or .no-y
+        class to the .takdivs-scrolledwindow.
+    
+    * takdivs-grid.css: .takdivs-grid class makes the element a grid container.
+      it was designed to be similar to file managers. it behaves as follows:
+      * .takdivs-grid will be a grid with children of 200px of width.
+      * children are added as columns. the number of columns depends on the
+        width available.
+      * whenever the .takdivs-grid does not have enough width to create new
+        column, a new element will be added in the next row.
     
     * takdivs-table.css: not really used for layout. it is just a table whose
       header stays visible at the top even if you scroll down. i usually put it
