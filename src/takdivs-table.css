@@ -1,6 +1,6 @@
 /*
-:Date: 2024-05-08
-:Version: 0.0.0
+:Date: 2024-05-15
+:Version: 0.1.1
 :Authors:
     * Mohammad Alghafli <thebsom@gmail.com>
 
@@ -13,13 +13,30 @@ usage:
     table is so big and you scroll down the table.
     
   * borders are added to the cells of the table.
+  
+  * add .alternate-color class to the .takdivs-table to make alternate rows have
+    alternate background colors. modifiy even rows colors with the css custom
+    attribute --takdivs-even-background-color.
+  
+  * add .selectable class to the takdivs-table to change background color of the
+    row when you hover over it. when .selectable class is applied, any row with
+    .selected class will change its background color. you can set the background
+    color of hover and .selected with css custom attributes
+    --takdivs-hover-background-color and --takdivs-selected-background-color.
     
   * you must put a <thead> in the .takdivs-table. otherwise, the table header
     will not follow the scroll to stay visible.
+  
+  * you must put a <tbody> in the .takdivs-table. otherwise, the table rows will
+    not be styled by .alternate-color and .selectable classes.
 */
 
 .takdivs-table {
     --takdivs-border-width: var(--takdivs-border-small);
+    --takdivs-even-background-color: lightgray;
+    --takdivs-hover-background-color: lightblue;
+    --takdivs-selected-background-color: cyan;
+    
     border-spacing: 0;
 
     & > thead {
@@ -45,6 +62,18 @@ usage:
 
     td:last-child, th:last-child {
         border-inline-end-width: var(--takdivs-border-width);
+    }
+    
+    &.alternate-color > tbody > tr:nth-child(even) {
+      background-color: var(--takdivs-even-background-color);
+    }
+    
+    &.selectable > tbody > tr:hover {
+      background-color: var(--takdivs-hover-background-color);
+    }
+    
+    &.selectable > tbody > tr.selected {
+      background-color: var(--takdivs-selected-background-color);
     }
 }
 
