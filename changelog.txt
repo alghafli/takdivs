@@ -17,3 +17,7 @@
   * updated --takdivs-border-large variable to 8px.
   * added --takdivs-size-* variables. available variables are small, medium and
     large.
+
+0.1.1:
+  * .takdivs-table behaviour can be modified with .alternate-color class and
+    .selectable class.
