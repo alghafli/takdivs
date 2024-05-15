@@ -1,6 +1,6 @@
-:Date: 2024-05-11
+:Date: 2024-05-15
 
-:Version: 0.1.0
+:Version: 0.1.1
 
 :Authors:
 
@@ -81,7 +81,9 @@ what is inside takdivs:
     
     * takdivs-table.css: not really used for layout. it is just a table whose
       header stays visible at the top even if you scroll down. i usually put it
-      in a .takdivs-scrolledwindow.
+      in a .takdivs-scrolledwindow. if you want, you can have alternating row
+      colors, change row color when you hover the mouse over it and change color
+      of selected rows by making the rows selectable.
     
     * takdivs.css: this file just imports the other files. you are better using
       takdivs-min.css instead of this one.
