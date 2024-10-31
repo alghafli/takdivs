@@ -1,13 +1,13 @@
 /*
-:Date: 2024-05-10
-:Version: 0.1.0
+:Date: 2024-10-25
+:Version: 0.1.2
 :Authors:
     * Mohammad Alghafli <thebsom@gmail.com>
 
 .takdivs-window class.
 
 usage:
-  * apply .takdivs-window class to the <body> element.
+  * apply .takdivs-window class to an element.
   
   * put a single child in the .takdivs-window.
     
@@ -25,8 +25,6 @@ usage:
     width: 100vw;
     height: 100vh;
     margin: 0;
-    
-    padding: var(--takdivs-border-medium);
     
     & > * {
         width: 100%;

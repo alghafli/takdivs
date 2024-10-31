@@ -1,6 +1,6 @@
 /*
-:Date: 2024-05-11
-:Version: 0.1.0
+:Date: 2024-10-25
+:Version: 0.1.2
 :Authors:
     * Mohammad Alghafli <thebsom@gmail.com>
 
@@ -23,5 +23,9 @@ custom properties used in takdivs:
     --takdivs-size-small: 50px;
     --takdivs-size-medium: 100px;
     --takdivs-size-large: 200px;
+
+    --takdivs-color-primary-1: lightcoral;
+    --takdivs-color-primary-2: lightgreen;
+    --takdivs-color-primary-3: lightblue;
 }
 

@@ -1,7 +1,7 @@
 /*
-:Date: 2024-05-15
+:Date: 2024-10-25
 
-:Version: 0.1.1
+:Version: 0.1.2
 
 :Authors:
 
@@ -40,8 +40,15 @@ what is inside takdivs:
     
     * takdivs-window.css: .takdivs-window styles which makes the element occupy
       the whole viewport and can contain a single child (like Gtk window).
-      should be used for the <body> element.
-      
+      should be used for the <body> element. if you have an popup element that
+      will be displayed over your .takdivs-window, make your .takdivs-window a
+      <div> inside the body instead.
+    
+    * takdivs-body.css: .takdivs-body just removes the margin from the body
+      element. if you have any popup elements that will be displayed over your
+      .takdivs-window, use this for the <body> element to allow other elements
+      to appear.
+
     * takdivs-box.css: .takdivs-box class which makes the element behaves like a
       Gtk.Box. it is basically a css flexbox which can:
       * pack children horizontally or vertically.
@@ -92,10 +99,12 @@ what is inside takdivs:
 
 @import "takdivs-vars.css";
 @import "takdivs-window.css";
+@import "takdivs-body.css";
 @import "takdivs-box.css";
 @import "takdivs-grid.css";
 @import "takdivs-imgbox.css";
 @import "takdivs-overlay.css";
 @import "takdivs-scrolledwindow.css";
 @import "takdivs-table.css";
+@import "takdivs-stack.css";
 
