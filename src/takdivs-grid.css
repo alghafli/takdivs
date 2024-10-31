@@ -1,6 +1,6 @@
 /*
-:Date: 2024-05-11
-:Version: 0.1.0
+:Date: 2024-08-09
+:Version: 0.1.2
 :Authors:
     * Mohammad Alghafli <thebsom@gmail.com>
 
@@ -8,23 +8,46 @@
 to be similar to a file manager.
 
 usage:
-  * apply .takdivs-grid class to an element to make it a grid.
+  * apply .takdivs-grid class to an element to make it a grid. children size
+    is medium.
   
-  * all children will take the same width of 100px.
+  * apply .small-items class to make children small.
   
-  * all children will be the same height as the child of maximum height.
+  * apply .medium-items class to make children medium (default).
+
+  * apply .large-items class to make children large.
 */
 
 .takdivs-grid {
-    --takdivs-column-width: var(--takdivs-size-medium);
+    --takdivs-size-column-width: var(--takdivs-size-medium);
     
     display: grid;
-    grid-template-columns: repeat(auto-fill, var(--takdivs-column-width));
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, var(--takdivs-size-column-width));
+    grid-auto-rows: var(--takdivs-size-column-width);
     
-    justify-items: center;
-    align-items: center;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: space-around;
     
     gap: var(--takdivs-border-large);
+    padding: var(--takdivs-border-large);
+    
+    &.small-items {
+        --takdivs-size-column-width: var(--takdivs-size-small);
+    }
+    &.medium-items {
+        --takdivs-size-column-width: var(--takdivs-size-medium);
+    }
+    &.large-items {
+        --takdivs-size-column-width: var(--takdivs-size-large);
+    }
+
+    &.hover > *:hover {
+        background: var(--takdivs-color-primary-2);
+    }
+
+    &.click > *:active {
+        background: var(--takdivs-color-primary-3);
+    }
 }
 

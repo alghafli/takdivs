@@ -21,3 +21,21 @@
 0.1.1:
   * .takdivs-table behaviour can be modified with .alternate-color class and
     .selectable class.
+
+0.1.2:
+  * .takdivs-grid:
+    * behaviour can be modified with .small-items, .medium-items
+      and .large-items classes.
+    * fixed children sizing, justification and alignment.
+    * added padding equal to the gap size.
+  * .takdivs-imgbox:
+    * minor fixes.
+  * .takdivs-stack:
+    * minor fixes.
+  * takdivs-vars.css:
+    * minor fixes.
+  * .takdivs-window:
+    * removed margin.
+  * .takdivs-body:
+    * initial version.
+

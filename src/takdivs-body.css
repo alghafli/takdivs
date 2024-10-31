@@ -1,0 +1,25 @@
+/*
+:Date: 2024-10-25
+:Version: 0.1.2
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-body class.
+
+usage:
+  * apply .takdivs-body class to the <body> element.
+  
+  * margin will be removed.
+
+  * in general, you do not need to use this. use .takdivs-window for the
+    <body> instead.
+  
+  * the case when you need .takdivs-body is when you have popup elements that
+    should be displayed over your .takdivs-window (like sl-alert from
+    shoelace) as the .takdivs-window will allow only the first child to appear.
+*/
+
+.takdivs-body {
+    margin: 0;
+}
+

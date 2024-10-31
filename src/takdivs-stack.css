@@ -1,0 +1,33 @@
+/*
+:Date: 2024-10-25
+:Version: 0.1.2
+:Authors:
+    * Mohammad Alghafli <thebsom@gmail.com>
+
+.takdivs-stack class.
+
+usage:
+  * apply .takdivs-stack class to a div.
+  
+  * the first .takdivs-stack child with .active class will be displayed.
+
+  * the displayed child will take the same size as the .takdivs-stack.
+
+an example use case is to have an <img> element and put an <svg> on top of it.
+you can put rectangles in the <svg> element to highlight certain areas in the
+<img>.
+*/
+
+.takdivs-stack {
+    position: relative;
+    
+    & > * {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    & > :not(.active), & > .active ~ .active {
+        display: none;
+    }
+}
